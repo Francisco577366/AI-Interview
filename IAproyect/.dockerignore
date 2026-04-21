@@ -1,0 +1,18 @@
+# Dependencies and build artifacts
+node_modules
+.next
+out
+dist
+
+# VCS and editor files
+.git
+.gitignore
+.vscode
+
+# Logs and local env
+*.log
+.env*
+
+# Docker files (optional to keep image context small)
+Dockerfile
+docker-compose.yml
