@@ -1,0 +1,23 @@
+# Dependencias (El más importante, corregido)
+node_modules/
+
+# Variables de entorno (Seguridad)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Builds y producción
+dist/
+build/
+.next/
+
+# Logs y debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de sistema/editores
+.DS_Store
+.vscode/

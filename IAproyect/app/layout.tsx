@@ -1,15 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Lato } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
 
-const fontMono = Geist_Mono({
+const lato = Lato({
   subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400", "700", "900"],
+  variable: "--font-lato",
 })
+
+
+export const metadata = {
+  title: "TechView App",
+  description: "A starter template for Next.js with Tailwind CSS and Shadcn UI.",
+}
 
 export default function RootLayout({
   children,
@@ -20,7 +26,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
+      className={cn("antialiased", `${lato.className}`)}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
