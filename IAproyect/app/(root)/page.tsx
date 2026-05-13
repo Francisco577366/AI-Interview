@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import Navbar from "./components/Navbar/Navbar"
 import { HeroBlock } from "./components/HeroBlock/HeroBlock"
 import { HowItWorks } from "./components/HowItWorks"
+import { Pricing } from "./components/Pricing"
 
 export default function Page() {
   return (
@@ -11,6 +12,8 @@ export default function Page() {
     <HeroBlock />
 
     <HowItWorks />
+
+    <Pricing />
    </div>
   )
 }
