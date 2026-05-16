@@ -1,8 +1,7 @@
 import { pricingPlans } from "./Pricing.data";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles } from "lucide-react";
-import Link from "next/link";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function Pricing() {
     return (
@@ -19,13 +18,13 @@ export function Pricing() {
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     {pricingPlans.map((plan, index) => (
-                        <Card key={index} className={`relative group hover:shadow-xl transition-all duration-300 border-0 px-2  py-6
+                        <Card key={index} className={`relative overflow-visible group hover:shadow-xl transition-all duration-300 border-0 px-2 py-6
                         ${plan.popular ? " rounded-md border bg-purple-900/70 border-purple-400/30 text-purple-200" : " rounded-md border bg-purple-600/20 border-purple-400/30 text-purple-200"}`}>
 
                             {
                                 plan.popular && (
-                                    <div className="absolute -top-4 left-1/2 transform-translate-x-1/2">
-                                        <span className="bg-white text-purple-800 text-sm font-medium px-4 py-2 rounded-full flex items-center gap-2">
+                                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                                        <span className="bg-white text-purple-800 text-xs font-semibold px-4 py-2 rounded-full flex items-center gap-2 whitespace-nowrap shadow-md">
                                             <Sparkles className="w-4 h-4 "/>
                                             Most Popular
                                         </span>
